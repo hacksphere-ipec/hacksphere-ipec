@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "title": "Hackathon 2024",
+    "date": "12 Jan 2024",
+    "shortDescription": "48-hour coding marathon with prizes worth $10,000",
+    "fullDescription": "Join us for the ultimate coding challenge! Our annual hackathon brings together the brightest minds in technology for 48 hours of non-stop innovation.",
+    "images": [
+      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1605647540924-852290f6b0d5?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=600&fit=crop",
+    "location": "Tech Hub, Main Campus",
+    "category": "Competition"
+  },
+  {
+    "id": 2,
+    "title": "AI Workshop Series",
+    "date": "25 Feb 2024",
+    "shortDescription": "Learn machine learning and deep learning fundamentals",
+    "fullDescription": "Dive deep into the world of Artificial Intelligence with our comprehensive workshop series.",
+    "images": [
+      "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&h=600&fit=crop"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop",
+    "location": "Innovation Lab, Building A",
+    "category": "Workshop"
+  },
+  {
+    "id": 3,
+    "title": "Tech Career Fair",
+    "date": "15 Mar 2024",
+    "shortDescription": "Connect with top tech companies for internships and jobs",
+    "fullDescription": "Your gateway to a successful tech career starts here!",
+    "images": [
+      "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1552581234-26160f608093?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=600&fit=crop"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=600&fit=crop",
+    "location": "University Convention Center",
+    "category": "Networking"
+  },
+  {
+    "id": 4,
+    "title": "Cybersecurity Summit",
+    "date": "20 Apr 2024",
+    "shortDescription": "Learn about the latest in cybersecurity and ethical hacking",
+    "fullDescription": "In an increasingly digital world, cybersecurity has never been more critical.",
+    "images": [
+      "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1563986768609-322dc132aad7?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1614940771299-e1a91a7e8c6f?w=800&h=600&fit=crop"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&h=600&fit=crop",
+    "location": "Security Research Center",
+    "category": "Education"
+  },
+  {
+    "id": 5,
+    "title": "Startup Pitch Competition",
+    "date": "10 May 2024",
+    "shortDescription": "Present your startup idea to VCs and win funding",
+    "fullDescription": "Do you have the next big tech idea? Our Startup Pitch Competition is your chance to showcase your vision.",
+    "images": [
+      "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&h=600&fit=crop"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&h=600&fit=crop",
+    "location": "Innovation Theater",
+    "category": "Competition"
+  },
+  {
+    "id": 6,
+    "title": "Web Development Bootcamp",
+    "date": "18 Jun 2024",
+    "shortDescription": "Master modern web technologies from frontend to backend",
+    "fullDescription": "Transform yourself into a full-stack web developer with our intensive 5-day bootcamp!",
+    "images": [
+      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1504639725590-34d98db2d027?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&h=600&fit=crop"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=600&fit=crop",
+    "location": "Computer Lab Complex",
+    "category": "Workshop"
+  }
+]
