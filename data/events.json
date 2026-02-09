@@ -1,107 +1,72 @@
 [
   {
     "id": 1,
-    "title": "Hackathon 2024",
-    "date": "12 Jan 2024",
-    "shortDescription": "48-hour coding marathon with prizes worth $10,000",
-    "fullDescription": "Join us for the ultimate coding challenge! Our annual hackathon brings together the brightest minds in technology for 48 hours of non-stop innovation.",
+    "title": "TIC TECH TOE",
+    "date": "30 May 2025",
+    "shortDescription": "A beginner-friendly workshop on Generative AI focusing on Google Gemini.\nCovering backend architecture, multimodal capabilities, and API integration through hands-on demos.",
+    "fullDescription": "A beginner-friendly workshop on Generative AI focusing on Google Gemini, covering its backend architecture, multimodal capabilities, and API integration through hands-on demos. The event was free of cost, and all participants received e-certificates.",
     "images": [
-      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1605647540924-852290f6b0d5?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop"
+      "/images/events/tictechtoe/img-1.jpeg",
+      "/images/events/tictechtoe/img-2.jpeg",
+      "/images/events/tictechtoe/img-3.jpeg",
+      "/images/events/tictechtoe/img-4.jpeg",
+      "/images/events/tictechtoe/img-5.jpeg",
+      "/images/events/tictechtoe/img-6.jpeg"
     ],
-    "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=600&fit=crop",
-    "location": "Tech Hub, Main Campus",
-    "category": "Competition"
+    "thumbnail": "/images/events/tictechtoe/img-1.jpeg",
+    "location": "AIML Seminar Hall, IPEC campus",
+    "category": "Workshop"
   },
   {
     "id": 2,
-    "title": "AI Workshop Series",
-    "date": "25 Feb 2024",
-    "shortDescription": "Learn machine learning and deep learning fundamentals",
-    "fullDescription": "Dive deep into the world of Artificial Intelligence with our comprehensive workshop series.",
+    "title": "Speaking Session on Communication Skills",
+    "date": "19 April 2025",
+    "shortDescription": "An interactive speaking session by HWI and its 6 chapters.\nFocused on improving communication skills, confidence, and public speaking.",
+    "fullDescription": "An interactive speaking session by HWI and its 6 chapters focused on improving communication skills, confidence, and public speaking. This workshop helps participants develop better presentation skills and overcome stage fright.",
     "images": [
-      "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&h=600&fit=crop"
+      "/images/events/msoffice/img-1.jpeg",
+      "/images/events/msoffice/img-2.jpeg",
+      "/images/events/msoffice/img-3.jpeg",
+      "/images/events/msoffice/img-4.jpeg",
+      "/images/events/msoffice/img-5.jpeg"
     ],
-    "thumbnail": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop",
-    "location": "Innovation Lab, Building A",
+    "thumbnail": "/images/events/msoffice/img-1.jpeg",
+    "location": "Microsoft Office, Noida",
     "category": "Workshop"
   },
   {
     "id": 3,
-    "title": "Tech Career Fair",
-    "date": "15 Mar 2024",
-    "shortDescription": "Connect with top tech companies for internships and jobs",
-    "fullDescription": "Your gateway to a successful tech career starts here!",
+    "title": "TechVerse",
+    "date": "02 September 2025",
+    "shortDescription": "A technical speaking session focused on Cybersecurity and AI in digital safety.\nFeatures hands-on tasks, prizes for top performers, and e-certificates for all participants.",
+    "fullDescription": "A technical speaking session by HWI – IPEC Student Chapter focused on Cybersecurity and the role of AI in digital safety, featuring hands-on tasks, prizes for top performers, and e-certificates for all participants.",
     "images": [
-      "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1552581234-26160f608093?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=600&fit=crop"
+      "/images/events/techverse/img-1.jpeg",
+      "/images/events/techverse/img-2.jpeg",
+      "/images/events/techverse/img-3.jpeg",
+      "/images/events/techverse/img-4.jpeg",
+      "/images/events/techverse/img-5.jpeg",
+      "/images/events/techverse/img-6.jpeg"
     ],
-    "thumbnail": "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=600&fit=crop",
-    "location": "University Convention Center",
-    "category": "Networking"
+    "thumbnail": "/images/events/techverse/img-1.jpeg",
+    "location": "Atal Sabhaghar, IPEC Campus",
+    "category": "Workshop"
   },
   {
     "id": 4,
-    "title": "Cybersecurity Summit",
-    "date": "20 Apr 2024",
-    "shortDescription": "Learn about the latest in cybersecurity and ethical hacking",
-    "fullDescription": "In an increasingly digital world, cybersecurity has never been more critical.",
+    "title": "HACKMART",
+    "date": "01 November 2025",
+    "shortDescription": "An AI-focused hackathon with ₹15,000 prize pool organized by Think AI Club.\nFeatures trophies for top teams and certificates for all participants.",
+    "fullDescription": "An AI-focused hackathon organized by with Hack With India in collaboration Think AI Club to promote innovation and AI-driven product development, featuring a ₹15,000 prize pool, trophies for top teams, and certificates for all participants.",
     "images": [
-      "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1563986768609-322dc132aad7?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1614940771299-e1a91a7e8c6f?w=800&h=600&fit=crop"
+      "/images/events/hackmart/img-1.jpeg",
+      "/images/events/hackmart/img-2.jpeg",
+      "/images/events/hackmart/img-3.jpeg",
+      "/images/events/hackmart/img-4.jpeg",
+      "/images/events/hackmart/img-5.jpeg"
     ],
-    "thumbnail": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&h=600&fit=crop",
-    "location": "Security Research Center",
-    "category": "Education"
-  },
-  {
-    "id": 5,
-    "title": "Startup Pitch Competition",
-    "date": "10 May 2024",
-    "shortDescription": "Present your startup idea to VCs and win funding",
-    "fullDescription": "Do you have the next big tech idea? Our Startup Pitch Competition is your chance to showcase your vision.",
-    "images": [
-      "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&h=600&fit=crop"
-    ],
-    "thumbnail": "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&h=600&fit=crop",
-    "location": "Innovation Theater",
+    "thumbnail": "/images/events/hackmart/img-1.jpeg",
+    "location": "AIML Seminar Hall, IPEC campus",
     "category": "Competition"
-  },
-  {
-    "id": 6,
-    "title": "Web Development Bootcamp",
-    "date": "18 Jun 2024",
-    "shortDescription": "Master modern web technologies from frontend to backend",
-    "fullDescription": "Transform yourself into a full-stack web developer with our intensive 5-day bootcamp!",
-    "images": [
-      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1504639725590-34d98db2d027?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&h=600&fit=crop"
-    ],
-    "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=600&fit=crop",
-    "location": "Computer Lab Complex",
-    "category": "Workshop"
   }
 ]
