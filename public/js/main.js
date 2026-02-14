@@ -521,17 +521,14 @@ function initializeSponsorsCarousel() {
                 track.removeEventListener('transitionend', onEnd);
                 currentIndex = 0;
                 applyTransform(false);
-                requestAnimationFrame(() => {
-                    requestAnimationFrame(() => {
-                        applyTransform(true);
-                        isTransitioning = false;
-                    });
-                });
+                setTimeout(() => {
+                    isTransitioning = false;
+                }, 50);
             }, { once: true });
         } else {
             setTimeout(() => {
                 isTransitioning = false;
-            }, 600);
+            }, 650);
         }
     }
 
