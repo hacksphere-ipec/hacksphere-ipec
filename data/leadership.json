@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Lakshay Mahajan",
+    "position": "President",
+    "bio": "Lakshay Mahajan leads HackSphere IPEC with a strong vision of using technology and artificial intelligence to create meaningful impact. Passionate about innovation and ethical AI, he fosters a culture of learning, collaboration, and problem-solving, inspiring members to build solutions that shape the future of technology and society.",
+    "photo": "/images/lakshay-mahajan.png",
+    "email": "lakshaymahajan3605@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/lakshay-mahajan-09326523"
+  },
+  {
+    "id": 2,
+    "name": "Aakansha Sharma",
+    "position": "Vice President",
+    "bio": "Aakansha Sharma plays a key role in driving innovation and collaboration at HackSphere IPEC. With a passion for AI, machine learning, and data-driven solutions, she actively empowers students to learn, build, and grow. Her leadership reflects dedication to fostering creativity, technical excellence, and impactful innovation within the community.",
+    "photo": "/images/aakansha-sharma.png",
+    "email": "iam.aakanshasharma18@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/aakansha-sharma/"
+  }
+]

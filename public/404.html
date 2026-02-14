@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found - HackSphere IPEC</title>
+    <link rel="icon" type="image/png" href="images/hs-logo.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .not-found {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--black);
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .not-found-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .not-found-icon {
+            font-size: 10rem;
+            color: var(--primary-red);
+            margin-bottom: 2rem;
+            animation: pulse 2s infinite;
+        }
+
+        .not-found h1 {
+            font-size: 6rem;
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .not-found h2 {
+            font-size: 3rem;
+            color: var(--primary-red);
+            margin-bottom: 2rem;
+        }
+
+        .not-found p {
+            font-size: 1.8rem;
+            color: var(--text-light);
+            margin-bottom: 3rem;
+            line-height: 1.6;
+        }
+
+        .not-found-buttons {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 768px) {
+            .not-found-icon {
+                font-size: 6rem;
+            }
+
+            .not-found h1 {
+                font-size: 4rem;
+            }
+
+            .not-found h2 {
+                font-size: 2rem;
+            }
+
+            .not-found-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="not-found">
+        <div class="not-found-content">
+            <div class="not-found-icon">
+                <i class="fas fa-exclamation-triangle"></i>
+            </div>
+            <h1>404</h1>
+            <h2>Page Not Found</h2>
+            <p>Oops! The page you're looking for doesn't exist. It might have been moved, deleted, or you entered the wrong URL.</p>
+            <div class="not-found-buttons">
+                <a href="/" class="btn btn-primary">
+                    <i class="fas fa-home"></i>
+                    <span>Go Home</span>
+                </a>
+                <a href="/#events" class="btn btn-secondary">
+                    <i class="fas fa-calendar"></i>
+                    <span>View Events</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

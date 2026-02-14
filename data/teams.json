@@ -1,0 +1,250 @@
+{
+  "description": "Our dedicated team drives execution, innovation, and operations within the society, working together to create impactful tech experiences and foster a vibrant community.",
+  "presidents": {
+    "president": {
+      "name": "Lakshay Mahajan",
+      "role": "President",
+      "image": "/images/lakshay-mahajan.png",
+      "linkedin": "https://www.linkedin.com/in/lakshay-mahajan-09326523"
+    },
+    "vp": {
+      "name": "Aakansha Sharma",
+      "role": "Vice President",
+      "image": "/images/aakansha-sharma.png",
+      "linkedin": "https://www.linkedin.com/in/aakansha-sharma/"
+    }
+  },
+  "teams": {
+    "core": {
+      "name": "Core Team",
+      "useLeadership": true
+    },
+    "tech": {
+      "name": "Tech Team",
+      "head": {
+        "name": "Aarav Verma",
+        "role": "Technical Head",
+        "image": "/images/teams/tech/aarav-verma.png",
+        "linkedin": "https://linkedin.com"
+      },
+      "subHeads": [
+        {
+          "name": "Fareed Akhtar",
+          "role": "Tech Sub Head",
+          "image": "/images/teams/tech/fareed-akhtar.png",
+          "linkedin": "https://www.linkedin.com"
+        },
+        {
+          "name": "Anushka Khanseli",
+          "role": "Tech Sub Head",
+          "image": "/images/teams/tech/anushka-khanseli.png",
+          "linkedin": "https://www.linkedin.com"
+        },
+        {
+          "name": "Nikhil Singh",
+          "role": "Tech Sub Head",
+          "image": "/images/teams/tech/nikhil-singh.png",
+          "linkedin": "https://www.linkedin.com"
+        }
+      ],
+      "volunteers": [
+        {
+          "name": "Tushar Yadav",
+          "role": "Tech Volunteer",
+          "image": "/images/teams/tech/tushar-yadav.png",
+          "linkedin": "https://www.linkedin.com"
+        },
+        {
+          "name": "Shubham Basak",
+          "role": "Tech Volunteer",
+          "image": "/images/teams/tech/shubham-basak.png",
+          "linkedin": "https://www.linkedin.com"
+        },
+        {
+          "name": "Parv Goyal",
+          "role": "Tech Volunteer",
+          "image": "/images/teams/tech/parv-goyal.png",
+          "linkedin": "https://www.linkedin.com"
+        },
+        {
+          "name": "Parth Garg",
+          "role": "Tech Volunteer",
+          "image": "/images/teams/tech/parth-garg.png",
+          "linkedin": "https://www.linkedin.com"
+        }
+      ]
+    },
+    "event": {
+      "name": "Event Team",
+      "head": {
+        "name": "Sharjil Sharma",
+        "role": "Event Head",
+        "image": "/images/teams/event/sharjil-sharma.png",
+        "linkedin": "https://www.linkedin.com"
+      },
+      "subHeads": [
+        {
+          "name": "Sneha Mishra",
+          "role": "Event Sub Head",
+          "image": "/images/teams/event/sneha-mishra.png",
+          "linkedin": "https://www.linkedin.com"
+        },
+        {
+          "name": "Samaira Verma",
+          "role": "Event Sub Head",
+          "image": "/images/teams/event/samaira-verma.png",
+          "linkedin": "https://www.linkedin.com"
+        }
+      ],
+      "volunteers": [
+        {
+          "name": "Sarthak Goyal",
+          "role": "Event Volunteer",
+          "image": "/images/teams/event/sarthak-goyal.png",
+          "linkedin": "https://www.linkedin.com"
+        },
+        {
+          "name": "Saumya Sharma",
+          "role": "Event Volunteer",
+          "image": "/images/teams/event/saumya-sharma.png",
+          "linkedin": "https://www.linkedin.com"
+        },
+        {
+          "name": "Sachin Yadav",
+          "role": "Event Volunteer",
+          "image": "/images/teams/event/sachin-yadav.png",
+          "linkedin": "https://www.linkedin.com"
+        }
+      ]
+    },
+    "design": {
+      "name": "Design Team",
+      "head": {
+        "name": "Niyati Gautam",
+        "role": "Design Head",
+        "image": "/images/teams/design/niyati-gautam.png",
+        "linkedin": "https://www.linkedin.com"
+      },
+      "volunteers": [
+        {
+          "name": "Ayaaz",
+          "role": "Design Volunteer",
+          "image": "/images/teams/design/ayaaz.png",
+          "linkedin": "https://www.linkedin.com"
+        }
+      ]
+    },
+    "sponsorship": {
+      "name": "Sponsorship and PR Team",
+      "head": {
+        "name": "Arihant",
+        "role": "Sponsorship and PR Head",
+        "image": "/images/teams/sponsorship/arihant.png",
+        "linkedin": "https://www.linkedin.com"
+      },
+      "volunteers": [
+        {
+          "name": "Rishabh Wasan",
+          "role": "Sponsorship and PR Volunteer",
+          "image": "/images/teams/sponsorship/rishabh-wasan.png",
+          "linkedin": "https://www.linkedin.com"
+        },
+        {
+          "name": "Raviraj Singh",
+          "role": "Sponsorship and PR Volunteer",
+          "image": "/images/teams/sponsorship/raviraj-singh.png",
+          "linkedin": "https://www.linkedin.com"
+        }
+      ]
+    },
+    "social": {
+      "name": "Social Media Team",
+      "head": {
+        "name": "Lakshya Gupta",
+        "role": "Social Media Head",
+        "image": "/images/teams/social-media/lakshya-gupta.png",
+        "linkedin": "https://www.linkedin.com"
+      },
+      "subHeads": [
+        {
+          "name": "Shreeya Shukla",
+          "role": "Social Media Sub Head",
+          "image": "/images/teams/social-media/shreeya-shukla.png",
+          "linkedin": "https://www.linkedin.com"
+        }
+      ],
+      "volunteers": [
+        {
+          "name": "Yash Negi",
+          "role": "Social Media Volunteer",
+          "image": "/images/teams/social-media/yash-negi.png",
+          "linkedin": "https://www.linkedin.com"
+        },
+        {
+          "name": "Akshita",
+          "role": "Social Media Volunteer",
+          "image": "/images/teams/social-media/akshita.png",
+          "linkedin": "https://www.linkedin.com"
+        },
+        {
+          "name": "Kritika Maurya",
+          "role": "Social Media Volunteer",
+          "image": "/images/teams/social-media/kritika-maurya.png",
+          "linkedin": "https://www.linkedin.com"
+        }
+      ]
+    },
+    "documentation": {
+      "name": "Documentation Team",
+      "head": {
+        "name": "Nancy",
+        "role": "Documentation Head",
+        "image": "/images/teams/documentation/nancy.png",
+        "linkedin": "https://linkedin.com"
+      },
+      "volunteers": [
+        {
+          "name": "Tanishk Rai",
+          "role": "Documentation Volunteer",
+          "image": "/images/teams/documentation/tanishk-rai.png",
+          "linkedin": "https://linkedin.com"
+        },
+        {
+          "name": "Nitya Pal",
+          "role": "Documentation Volunteer",
+          "image": "/images/teams/documentation/nitya-pal.png",
+          "linkedin": "https://linkedin.com"
+        },
+        {
+          "name": "Gauri Sharma",
+          "role": "Documentation Volunteer",
+          "image": "/images/teams/documentation/gauri-sharma.png",
+          "linkedin": "https://linkedin.com"
+        },
+        {
+          "name": "Shourya Jain",
+          "role": "Documentation Volunteer",
+          "image": "/images/teams/documentation/shourya-jain.png",
+          "linkedin": "https://linkedin.com"
+        }
+      ]
+    },
+    "editing": {
+      "name": "Editing Team",
+      "head": {
+        "name": "Kishan Gupta",
+        "role": "Editing Head",
+        "image": "/images/teams/editing/kishan-gupta.png",
+        "linkedin": "https://www.linkedin.com"
+      },
+      "volunteers": [
+        {
+          "name": "Himanshu Kala",
+          "role": "Editing Volunteer",
+          "image": "/images/teams/editing/himanshu-kala.png",
+          "linkedin": "https://www.linkedin.com"
+        }
+      ]
+    }
+  }
+}
