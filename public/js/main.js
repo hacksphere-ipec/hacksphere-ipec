@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeCounters();
     loadEvents();
     loadLeadership();
+    loadTeams();
     initializeContactForm();
     initializeSmoothScrolling();
     initializeSponsorsCarousel();
@@ -333,6 +334,220 @@ function showLeadershipError() {
     `;
 }
 
+// Teams Section
+let teamsData = null;
+let currentTeam = null;
+
+async function loadTeams() {
+    try {
+        const response = await fetch('data/teams.json');
+        if (!response.ok) throw new Error('Failed to load teams data');
+        
+        teamsData = await response.json();
+        
+        // Update description
+        const descElement = document.getElementById('teams-description');
+        if (descElement && teamsData.description) {
+            descElement.textContent = teamsData.description;
+        }
+        
+        // Load first team by default (Core Team)
+        if (teamsData.teams) {
+            currentTeam = 'core';
+        }
+        
+        // Initialize navigation
+        initializeTeamsNavigation();
+        
+        // Display the core team
+        if (teamsData.teams) {
+            displayTeam(currentTeam);
+        }
+    } catch (error) {
+        console.error('Error loading teams:', error);
+        const teamsGrid = document.getElementById('teams-grid');
+        if (teamsGrid) {
+            teamsGrid.innerHTML = `
+                <div style="grid-column: 1/-1; text-align: center; padding: 4rem;">
+                    <i class="fas fa-exclamation-circle" style="font-size: 4rem; color: var(--primary-red); margin-bottom: 1rem;"></i>
+                    <p style="color: var(--text-light); font-size: 1.6rem;">Failed to load team members</p>
+                </div>
+            `;
+        }
+    }
+}
+
+function initializeTeamsNavigation() {
+    if (!teamsData || !teamsData.teams) return;
+    
+    const sidebar = document.getElementById('teams-nav');
+    const mobileTabs = document.getElementById('teams-mobile-tabs');
+    
+    // Clear existing content
+    if (sidebar) sidebar.innerHTML = '';
+    if (mobileTabs) mobileTabs.innerHTML = '';
+    
+    // Get team keys
+    const teamKeys = Object.keys(teamsData.teams);
+    
+    // Desktop sidebar
+    if (sidebar) {
+        teamKeys.forEach(teamKey => {
+            const team = teamsData.teams[teamKey];
+            const tab = document.createElement('button');
+            tab.className = 'team-tab';
+            tab.textContent = team.name;
+            tab.dataset.team = teamKey;
+            
+            if (teamKey === currentTeam) {
+                tab.classList.add('active');
+            }
+            
+            tab.addEventListener('click', () => {
+                currentTeam = teamKey;
+                updateActiveTab();
+                displayTeam(teamKey);
+            });
+            
+            sidebar.appendChild(tab);
+        });
+    }
+    
+    // Mobile tabs
+    if (mobileTabs) {
+        const container = document.createElement('div');
+        container.className = 'mobile-tabs-container';
+        
+        teamKeys.forEach(teamKey => {
+            const team = teamsData.teams[teamKey];
+            const tab = document.createElement('button');
+            tab.className = 'mobile-tab';
+            tab.textContent = team.name;
+            tab.dataset.team = teamKey;
+            
+            if (teamKey === currentTeam) {
+                tab.classList.add('active');
+            }
+            
+            tab.addEventListener('click', () => {
+                currentTeam = teamKey;
+                updateActiveTab();
+                displayTeam(teamKey);
+            });
+            
+            container.appendChild(tab);
+        });
+        
+        mobileTabs.appendChild(container);
+    }
+}
+
+function updateActiveTab() {
+    // Update desktop tabs
+    document.querySelectorAll('.team-tab').forEach(tab => {
+        if (tab.dataset.team === currentTeam) {
+            tab.classList.add('active');
+        } else {
+            tab.classList.remove('active');
+        }
+    });
+    
+    // Update mobile tabs
+    document.querySelectorAll('.mobile-tab').forEach(tab => {
+        if (tab.dataset.team === currentTeam) {
+            tab.classList.add('active');
+        } else {
+            tab.classList.remove('active');
+        }
+    });
+}
+
+async function displayTeam(teamKey) {
+    const teamsGrid = document.getElementById('teams-grid');
+    if (!teamsGrid || !teamsData) return;
+    
+    const team = teamsData.teams[teamKey];
+    if (!team) return;
+    
+    // Clear grid
+    teamsGrid.innerHTML = '';
+    teamsGrid.className = 'teams-grid';
+    
+    let members = [];
+    
+    // Handle Core Team - presidents + all team heads
+    if (teamKey === 'core' && team.useLeadership) {
+        // Add presidents first
+        if (teamsData.presidents) {
+            if (teamsData.presidents.president) {
+                members.push(teamsData.presidents.president);
+            }
+            if (teamsData.presidents.vp) {
+                members.push(teamsData.presidents.vp);
+            }
+        }
+        
+        // Add all heads from other teams
+        const teamKeys = Object.keys(teamsData.teams);
+        teamKeys.forEach(key => {
+            if (key !== 'core') {
+                const otherTeam = teamsData.teams[key];
+                if (otherTeam.head) {
+                    members.push(otherTeam.head);
+                }
+            }
+        });
+    } else {
+        // Regular team structure
+        if (team.head) {
+            members.push(team.head);
+        }
+        
+        if (team.subHeads && Array.isArray(team.subHeads)) {
+            members = members.concat(team.subHeads);
+        }
+        
+        if (team.volunteers && Array.isArray(team.volunteers)) {
+            members = members.concat(team.volunteers);
+        }
+    }
+    
+    // Create member cards
+    members.forEach(member => {
+        const card = createTeamCard(member);
+        teamsGrid.appendChild(card);
+    });
+    
+    // Trigger scroll animations
+    document.querySelectorAll('.team-card.fade-in').forEach(card => {
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        observer.observe(card);
+    });
+}
+
+function createTeamCard(member) {
+    const card = document.createElement('div');
+    card.className = 'team-card fade-in';
+    
+    card.innerHTML = `
+        <img src="${member.image}" alt="${member.name}" class="team-photo" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=400&h=400&fit=crop'">
+        <h3 class="team-name">${member.name}</h3>
+        <div class="team-card-divider"></div>
+        <p class="team-role">${member.role}</p>
+        <a href="${member.linkedin}" target="_blank" rel="noopener noreferrer" class="team-link" aria-label="LinkedIn Profile">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+    `;
+    
+    return card;
+}
+
 // Contact form functionality
 function initializeContactForm() {
     if (!contactForm) return;
@@ -521,17 +736,14 @@ function initializeSponsorsCarousel() {
                 track.removeEventListener('transitionend', onEnd);
                 currentIndex = 0;
                 applyTransform(false);
-                requestAnimationFrame(() => {
-                    requestAnimationFrame(() => {
-                        applyTransform(true);
-                        isTransitioning = false;
-                    });
-                });
+                setTimeout(() => {
+                    isTransitioning = false;
+                }, 50);
             }, { once: true });
         } else {
             setTimeout(() => {
                 isTransitioning = false;
-            }, 600);
+            }, 650);
         }
     }
 

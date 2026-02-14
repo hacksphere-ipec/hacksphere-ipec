@@ -10,6 +10,7 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/data', express.static(path.join(__dirname, 'data')));
 
 // Helper function to read JSON data
 function readJSONFile(filename) {
@@ -51,6 +52,12 @@ app.get('/api/events/:id', (req, res) => {
 app.get('/api/leadership', (req, res) => {
     const leadership = readJSONFile('leadership.json');
     res.json(leadership);
+});
+
+// Get teams data
+app.get('/api/teams', (req, res) => {
+    const teams = readJSONFile('teams.json');
+    res.json(teams);
 });
 
 // Event details page
