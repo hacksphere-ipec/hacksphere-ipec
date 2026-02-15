@@ -1417,6 +1417,52 @@ p {
     background: var(--black);
 }
 
+/* Year Selector */
+.year-selector-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+    padding: 1.5rem;
+    background: var(--card-bg);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.year-selector {
+    padding: 0.8rem 1.5rem;
+    background: var(--bg-dark);
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--white);
+    font-size: 1.4rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    min-width: 180px;
+    outline: none;
+    text-align: center;
+}
+
+.year-selector:hover {
+    border-color: var(--primary-green);
+    box-shadow: 0 0 10px var(--green-glow);
+}
+
+.year-selector:focus {
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 12px var(--blue-glow);
+}
+
+.year-selector option {
+    background: var(--bg-dark);
+    color: var(--white);
+    padding: 0.8rem;
+}
+
 .teams-layout {
     display: flex;
     gap: 2.5rem;
@@ -1567,28 +1613,71 @@ p {
     left: 100%;
 }
 
+/* Team Photo with Loading State */
+.team-photo-wrapper {
+    position: relative;
+    width: 75px;
+    height: 75px;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+}
+
+.team-photo-skeleton {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: linear-gradient(
+        90deg,
+        var(--bg-dark) 0%,
+        var(--card-bg) 50%,
+        var(--bg-dark) 100%
+    );
+    background-size: 200% 100%;
+    animation: skeleton-loading 1.5s ease-in-out infinite;
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+.team-photo-wrapper.loaded .team-photo-skeleton {
+    display: none;
+}
+
 .team-photo {
-    width: 90px;
-    height: 90px;
+    width: 75px;
+    height: 75px;
     border-radius: 50%;
     object-fit: cover;
-    margin: 0 auto 1rem;
-    border: 3px solid transparent;
+    border: 2.5px solid transparent;
     background: linear-gradient(var(--card-bg), var(--card-bg)) padding-box,
                 var(--gradient-text) border-box;
     transition: var(--transition);
+    opacity: 0;
+}
+
+.team-photo-wrapper.loaded .team-photo {
+    opacity: 1;
 }
 
 .team-card:hover .team-photo {
-    box-shadow: 0 0 20px var(--green-glow), 0 0 10px var(--blue-glow);
+    box-shadow: 0 0 18px var(--green-glow), 0 0 10px var(--blue-glow);
     transform: scale(1.08);
 }
 
 .team-card-divider {
-    width: 100%;
+    width: 80%;
     height: 1px;
     background: linear-gradient(90deg, transparent, var(--border-color), transparent);
-    margin: 1rem 0;
+    margin: 0.8rem 0;
 }
 
 .team-name {
@@ -1654,6 +1743,7 @@ p {
         padding: 1.8rem 1.2rem;
     }
     
+    .team-photo-wrapper,
     .team-photo {
         width: 80px;
         height: 80px;
@@ -1661,6 +1751,18 @@ p {
 }
 
 @media (max-width: 768px) {
+    .year-selector-wrapper {
+        margin-top: 2.5rem;
+        padding: 1.2rem;
+        max-width: 280px;
+    }
+    
+    .year-selector {
+        width: 100%;
+        font-size: 1.3rem;
+        padding: 0.8rem 1.2rem;
+    }
+    
     .teams-sidebar {
         display: none;
     }
@@ -1676,40 +1778,64 @@ p {
     
     .teams-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
+        gap: 1.2rem;
     }
     
     .team-card {
-        padding: 1.8rem 1.2rem;
+        padding: 1.3rem 0.8rem;
+        max-width: 100%;
     }
     
+    .team-photo-wrapper,
     .team-photo {
-        width: 85px;
-        height: 85px;
+        width: 65px;
+        height: 65px;
     }
     
     .team-name {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
     }
     
     .team-role {
-        font-size: 1.1rem;
+        font-size: 0.95rem;
+        min-height: 2.4rem;
+    }
+    
+    .team-link {
+        width: 30px;
+        height: 30px;
+        font-size: 1.2rem;
+    }
+    
+    .teams-content-title {
+        font-size: 2.2rem;
     }
 }
 
 @media (max-width: 480px) {
     .teams-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
+        gap: 1rem;
     }
     
     .team-card {
-        padding: 2rem 1.5rem;
+        padding: 1.2rem 0.7rem;
+        max-width: 100%;
     }
     
+    .team-photo-wrapper,
     .team-photo {
-        width: 90px;
-        height: 90px;
+        width: 60px;
+        height: 60px;
+    }
+    
+    .team-name {
+        font-size: 1.15rem;
+    }
+    
+    .team-role {
+        font-size: 0.9rem;
+        min-height: 2.2rem;
     }
     
     .mobile-tabs-container {
@@ -1719,5 +1845,14 @@ p {
     .mobile-tab {
         padding: 0.8rem 1.5rem;
         font-size: 1.2rem;
+    }
+    
+    .teams-content-title {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .teams-content-header {
+        margin-bottom: 2rem;
     }
 }

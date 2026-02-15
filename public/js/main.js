@@ -12,13 +12,17 @@ let events = [];
 let leadership = [];
 
 // Initialize the application
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', async function() {
     initializeNavigation();
     initializeScrollAnimations();
     initializeCounters();
     loadEvents();
     loadLeadership();
-    loadTeams();
+    
+    // Load years first, then teams
+    await loadYears();
+    await loadTeams(currentYear);
+    
     initializeContactForm();
     initializeSmoothScrolling();
     initializeSponsorsCarousel();
@@ -334,13 +338,71 @@ function showLeadershipError() {
     `;
 }
 
-// Teams Section
+// Teams Section  
 let teamsData = null;
 let currentTeam = null;
+let currentYear = null;
+let availableYears = [];
 
-async function loadTeams() {
+// Configuration - Set default year to display
+// Change this to set which year shows by default (e.g., 'fy26', 'fy27')
+const DEFAULT_TEAM_YEAR = 'fy26';
+
+// Load available years
+async function loadYears() {
     try {
-        const response = await fetch('data/teams.json');
+        const response = await fetch('/api/teams/years');
+        if (!response.ok) throw new Error('Failed to load years');
+        
+        availableYears = await response.json();
+        
+        // Populate year selector
+        const yearSelect = document.getElementById('team-year-select');
+        if (yearSelect && availableYears.length > 0) {
+            yearSelect.innerHTML = availableYears.map(year => {
+                const yearLabel = formatYearLabel(year);
+                return `<option value="${year}">${yearLabel}</option>`;
+            }).join('');
+            
+            // Set current year - use configured default if available, otherwise use most recent
+            if (availableYears.includes(DEFAULT_TEAM_YEAR)) {
+                currentYear = DEFAULT_TEAM_YEAR;
+            } else {
+                currentYear = availableYears[0]; // Most recent available
+            }
+            
+            yearSelect.value = currentYear;
+            
+            // Add change listener
+            yearSelect.addEventListener('change', (e) => {
+                currentYear = e.target.value;
+                loadTeams(currentYear);
+            });
+        }
+    } catch (error) {
+        console.error('Error loading years:', error);
+        currentYear = DEFAULT_TEAM_YEAR; // Use configured default as fallback
+    }
+}
+
+// Format year label for display
+function formatYearLabel(year) {
+    // Convert 'fy26' to 'FY 2025-26', 'fy27' to 'FY 2026-27', etc.
+    if (year.startsWith('fy')) {
+        const yearNum = parseInt(year.substring(2));
+        const startYear = 2000 + yearNum - 1;
+        const endYear = yearNum;
+        return `FY ${startYear}-${endYear}`;
+    }
+    return year;
+}
+
+async function loadTeams(year = null) {
+    try {
+        // Use provided year or current year
+        const targetYear = year || currentYear || 'fy26';
+        
+        const response = await fetch(`/api/teams/${targetYear}`);
         if (!response.ok) throw new Error('Failed to load teams data');
         
         teamsData = await response.json();
@@ -462,6 +524,23 @@ function updateActiveTab() {
     });
 }
 
+// Fix president image paths based on current year
+function fixPresidentImagePaths(president, year) {
+    if (!president || !president.image) return president;
+    
+    // Clone the president object to avoid modifying the original
+    const fixedPresident = { ...president };
+    
+    // Update image path to use current year
+    // Convert /images/presidents/fy26/name.png to /images/presidents/fy27/name.png
+    fixedPresident.image = president.image.replace(
+        /\/images\/presidents\/fy\d+\//,
+        `/images/presidents/${year}/`
+    );
+    
+    return fixedPresident;
+}
+
 async function displayTeam(teamKey) {
     const teamsGrid = document.getElementById('teams-grid');
     if (!teamsGrid || !teamsData) return;
@@ -477,13 +556,15 @@ async function displayTeam(teamKey) {
     
     // Handle Core Team - presidents + all team heads
     if (teamKey === 'core' && team.useLeadership) {
-        // Add presidents first
+        // Add presidents first with corrected image paths
         if (teamsData.presidents) {
             if (teamsData.presidents.president) {
-                members.push(teamsData.presidents.president);
+                const fixedPresident = fixPresidentImagePaths(teamsData.presidents.president, currentYear);
+                members.push(fixedPresident);
             }
             if (teamsData.presidents.vp) {
-                members.push(teamsData.presidents.vp);
+                const fixedVP = fixPresidentImagePaths(teamsData.presidents.vp, currentYear);
+                members.push(fixedVP);
             }
         }
         
@@ -535,8 +616,31 @@ function createTeamCard(member) {
     const card = document.createElement('div');
     card.className = 'team-card fade-in';
     
+    // Create image element with loading state
+    const imgWrapper = document.createElement('div');
+    imgWrapper.className = 'team-photo-wrapper';
+    imgWrapper.innerHTML = '<div class="team-photo-skeleton"></div>';
+    
+    const img = document.createElement('img');
+    img.className = 'team-photo';
+    img.alt = member.name;
+    img.loading = 'lazy';
+    
+    // Handle image load
+    img.onload = function() {
+        imgWrapper.classList.add('loaded');
+    };
+    
+    // Handle image error with fallback
+    img.onerror = function() {
+        this.src = 'https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=400&h=400&fit=crop';
+        imgWrapper.classList.add('loaded');
+    };
+    
+    img.src = member.image;
+    imgWrapper.appendChild(img);
+    
     card.innerHTML = `
-        <img src="${member.image}" alt="${member.name}" class="team-photo" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=400&h=400&fit=crop'">
         <h3 class="team-name">${member.name}</h3>
         <div class="team-card-divider"></div>
         <p class="team-role">${member.role}</p>
@@ -544,6 +648,9 @@ function createTeamCard(member) {
             <i class="fab fa-linkedin-in"></i>
         </a>
     `;
+    
+    // Insert image wrapper at the beginning
+    card.insertBefore(imgWrapper, card.firstChild);
     
     return card;
 }

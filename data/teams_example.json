@@ -1,0 +1,201 @@
+{
+  "description": "Description here - explain what your team does",
+  "presidents": {
+    "president": {
+      "name": "President Name Here",
+      "role": "President",
+      "image": "/images/presidents/fy26/president-name.png",
+      "linkedin": "https://linkedin.com/in/username"
+    },
+    "vp": {
+      "name": "VP Name Here",
+      "role": "Vice President",
+      "image": "/images/presidents/fy26/vp-name.png",
+      "linkedin": "https://linkedin.com/in/username"
+    }
+  },
+  "teams": {
+    "core": {
+      "name": "Core Team",
+      "useLeadership": true
+    },
+    "tech": {
+      "name": "Tech Team",
+      "head": {
+        "name": "Tech Head Name Here",
+        "role": "Technical Head",
+        "image": "/images/teams/fy26/tech/head-name.png",
+        "linkedin": "https://linkedin.com/in/username"
+      },
+      "subHeads": [
+        {
+          "name": "Tech Sub Head 1 Name Here",
+          "role": "Tech Sub Head",
+          "image": "/images/teams/fy26/tech/subhead1-name.png",
+          "linkedin": "https://linkedin.com/in/username"
+        },
+        {
+          "name": "Tech Sub Head 2 Name Here",
+          "role": "Tech Sub Head",
+          "image": "/images/teams/fy26/tech/subhead2-name.png",
+          "linkedin": "https://linkedin.com/in/username"
+        }
+      ],
+      "volunteers": [
+        {
+          "name": "Tech Volunteer 1 Name Here",
+          "role": "Tech Volunteer",
+          "image": "/images/teams/fy26/tech/volunteer1-name.png",
+          "linkedin": "https://linkedin.com/in/username"
+        },
+        {
+          "name": "Tech Volunteer 2 Name Here",
+          "role": "Tech Volunteer",
+          "image": "/images/teams/fy26/tech/volunteer2-name.png",
+          "linkedin": "https://linkedin.com/in/username"
+        }
+      ]
+    },
+    "event": {
+      "name": "Event Team",
+      "head": {
+        "name": "Event Head Name Here",
+        "role": "Event Head",
+        "image": "/images/teams/fy26/event/head-name.png",
+        "linkedin": "https://linkedin.com/in/username"
+      },
+      "subHeads": [
+        {
+          "name": "Event Sub Head Name Here",
+          "role": "Event Sub Head",
+          "image": "/images/teams/fy26/event/subhead-name.png",
+          "linkedin": "https://linkedin.com/in/username"
+        }
+      ],
+      "volunteers": [
+        {
+          "name": "Event Volunteer 1 Name Here",
+          "role": "Event Volunteer",
+          "image": "/images/teams/fy26/event/volunteer1-name.png",
+          "linkedin": "https://linkedin.com/in/username"
+        },
+        {
+          "name": "Event Volunteer 2 Name Here",
+          "role": "Event Volunteer",
+          "image": "/images/teams/fy26/event/volunteer2-name.png",
+          "linkedin": "https://linkedin.com/in/username"
+        }
+      ]
+    },
+    "design": {
+      "name": "Design Team",
+      "head": {
+        "name": "Design Head Name Here",
+        "role": "Design Head",
+        "image": "/images/teams/fy26/design/head-name.png",
+        "linkedin": "https://linkedin.com/in/username"
+      },
+      "subHeads": [
+        {
+          "name": "Design Sub Head Name Here",
+          "role": "Design Sub Head",
+          "image": "/images/teams/fy26/design/subhead-name.png",
+          "linkedin": "https://linkedin.com/in/username"
+        }
+      ],
+      "volunteers": [
+        {
+          "name": "Design Volunteer Name Here",
+          "role": "Design Volunteer",
+          "image": "/images/teams/fy26/design/volunteer-name.png",
+          "linkedin": "https://linkedin.com/in/username"
+        }
+      ]
+    },
+    "documentation": {
+      "name": "Documentation Team",
+      "head": {
+        "name": "Documentation Head Name Here",
+        "role": "Documentation Head",
+        "image": "/images/teams/fy26/documentation/head-name.png",
+        "linkedin": "https://linkedin.com/in/username"
+      },
+      "subHeads": [],
+      "volunteers": [
+        {
+          "name": "Documentation Volunteer Name Here",
+          "role": "Documentation Volunteer",
+          "image": "/images/teams/fy26/documentation/volunteer-name.png",
+          "linkedin": "https://linkedin.com/in/username"
+        }
+      ]
+    },
+    "editing": {
+      "name": "Editing Team",
+      "head": {
+        "name": "Editing Head Name Here",
+        "role": "Editing Head",
+        "image": "/images/teams/fy26/editing/head-name.png",
+        "linkedin": "https://linkedin.com/in/username"
+      },
+      "subHeads": [],
+      "volunteers": [
+        {
+          "name": "Editing Volunteer Name Here",
+          "role": "Editing Volunteer",
+          "image": "/images/teams/fy26/editing/volunteer-name.png",
+          "linkedin": "https://linkedin.com/in/username"
+        }
+      ]
+    },
+    "social-media": {
+      "name": "Social Media Team",
+      "head": {
+        "name": "Social Media Head Name Here",
+        "role": "Social Media Head",
+        "image": "/images/teams/fy26/social-media/head-name.png",
+        "linkedin": "https://linkedin.com/in/username"
+      },
+      "subHeads": [
+        {
+          "name": "Social Media Sub Head Name Here",
+          "role": "Social Media Sub Head",
+          "image": "/images/teams/fy26/social-media/subhead-name.png",
+          "linkedin": "https://linkedin.com/in/username"
+        }
+      ],
+      "volunteers": [
+        {
+          "name": "Social Media Volunteer Name Here",
+          "role": "Social Media Volunteer",
+          "image": "/images/teams/fy26/social-media/volunteer-name.png",
+          "linkedin": "https://linkedin.com/in/username"
+        }
+      ]
+    },
+    "sponsorship": {
+      "name": "Sponsorship Team",
+      "head": {
+        "name": "Sponsorship Head Name Here",
+        "role": "Sponsorship Head",
+        "image": "/images/teams/fy26/sponsorship/head-name.png",
+        "linkedin": "https://linkedin.com/in/username"
+      },
+      "subHeads": [],
+      "volunteers": [
+        {
+          "name": "Sponsorship Volunteer 1 Name Here",
+          "role": "Sponsorship Volunteer",
+          "image": "/images/teams/fy26/sponsorship/volunteer1-name.png",
+          "linkedin": "https://linkedin.com/in/username"
+        },
+        {
+          "name": "Sponsorship Volunteer 2 Name Here",
+          "role": "Sponsorship Volunteer",
+          "image": "/images/teams/fy26/sponsorship/volunteer2-name.png",
+          "linkedin": "https://linkedin.com/in/username"
+        }
+      ]
+    }
+  }
+}

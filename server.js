@@ -23,6 +23,35 @@ function readJSONFile(filename) {
     }
 }
 
+// Helper function to read year-based team data
+function readTeamsForYear(year) {
+    try {
+        const filePath = path.join(__dirname, 'data', year, 'teams.json');
+        const data = fs.readFileSync(filePath, 'utf8');
+        return JSON.parse(data);
+    } catch (error) {
+        console.error(`Error reading teams for year ${year}:`, error);
+        return null;
+    }
+}
+
+// Get available years
+function getAvailableYears() {
+    try {
+        const dataDir = path.join(__dirname, 'data');
+        const items = fs.readdirSync(dataDir, { withFileTypes: true });
+        const years = items
+            .filter(item => item.isDirectory() && item.name.startsWith('fy'))
+            .map(item => item.name)
+            .sort()
+            .reverse(); // Most recent first
+        return years;
+    } catch (error) {
+        console.error('Error getting available years:', error);
+        return ['fy26'];
+    }
+}
+
 // Routes
 
 // Home route - serve main page
@@ -54,10 +83,30 @@ app.get('/api/leadership', (req, res) => {
     res.json(leadership);
 });
 
-// Get teams data
+// Get available team years
+app.get('/api/teams/years', (req, res) => {
+    const years = getAvailableYears();
+    res.json(years);
+});
+
+// Get teams data for a specific year
+app.get('/api/teams/:year', (req, res) => {
+    const year = req.params.year;
+    const teams = readTeamsForYear(year);
+    
+    if (teams) {
+        res.json(teams);
+    } else {
+        res.status(404).json({ error: `Teams data not found for year ${year}` });
+    }
+});
+
+// Legacy route - defaults to latest year
 app.get('/api/teams', (req, res) => {
-    const teams = readJSONFile('teams.json');
-    res.json(teams);
+    const years = getAvailableYears();
+    const latestYear = years[0] || 'fy26';
+    const teams = readTeamsForYear(latestYear);
+    res.json(teams || {});
 });
 
 // Event details page

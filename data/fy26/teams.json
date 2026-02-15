@@ -4,13 +4,13 @@
     "president": {
       "name": "Lakshay Mahajan",
       "role": "President",
-      "image": "/images/lakshay-mahajan.png",
+      "image": "/images/presidents/fy26/lakshay-mahajan.png",
       "linkedin": "https://www.linkedin.com/in/lakshay-mahajan-09326523"
     },
     "vp": {
       "name": "Aakansha Sharma",
       "role": "Vice President",
-      "image": "/images/aakansha-sharma.png",
+      "image": "/images/presidents/fy26/aakansha-sharma.png",
       "linkedin": "https://www.linkedin.com/in/aakansha-sharma/"
     }
   },
@@ -24,26 +24,26 @@
       "head": {
         "name": "Aarav Verma",
         "role": "Technical Head",
-        "image": "/images/teams/tech/aarav-verma.png",
+        "image": "/images/teams/fy26/tech/aarav-verma.png",
         "linkedin": "https://linkedin.com"
       },
       "subHeads": [
         {
           "name": "Fareed Akhtar",
           "role": "Tech Sub Head",
-          "image": "/images/teams/tech/fareed-akhtar.png",
+          "image": "/images/teams/fy26/tech/fareed-akhtar.png",
           "linkedin": "https://www.linkedin.com"
         },
         {
           "name": "Anushka Khanseli",
           "role": "Tech Sub Head",
-          "image": "/images/teams/tech/anushka-khanseli.png",
+          "image": "/images/teams/fy26/tech/anushka-khanseli.png",
           "linkedin": "https://www.linkedin.com"
         },
         {
           "name": "Nikhil Singh",
           "role": "Tech Sub Head",
-          "image": "/images/teams/tech/nikhil-singh.png",
+          "image": "/images/teams/fy26/tech/nikhil-singh.png",
           "linkedin": "https://www.linkedin.com"
         }
       ],
@@ -51,25 +51,25 @@
         {
           "name": "Tushar Yadav",
           "role": "Tech Volunteer",
-          "image": "/images/teams/tech/tushar-yadav.png",
+          "image": "/images/teams/fy26/tech/tushar-yadav.png",
           "linkedin": "https://www.linkedin.com"
         },
         {
           "name": "Shubham Basak",
           "role": "Tech Volunteer",
-          "image": "/images/teams/tech/shubham-basak.png",
+          "image": "/images/teams/fy26/tech/shubham-basak.png",
           "linkedin": "https://www.linkedin.com"
         },
         {
           "name": "Parv Goyal",
           "role": "Tech Volunteer",
-          "image": "/images/teams/tech/parv-goyal.png",
+          "image": "/images/teams/fy26/tech/parv-goyal.png",
           "linkedin": "https://www.linkedin.com"
         },
         {
           "name": "Parth Garg",
           "role": "Tech Volunteer",
-          "image": "/images/teams/tech/parth-garg.png",
+          "image": "/images/teams/fy26/tech/parth-garg.png",
           "linkedin": "https://www.linkedin.com"
         }
       ]
@@ -79,20 +79,20 @@
       "head": {
         "name": "Sharjil Sharma",
         "role": "Event Head",
-        "image": "/images/teams/event/sharjil-sharma.png",
+        "image": "/images/teams/fy26/event/sharjil-sharma.png",
         "linkedin": "https://www.linkedin.com"
       },
       "subHeads": [
         {
           "name": "Sneha Mishra",
           "role": "Event Sub Head",
-          "image": "/images/teams/event/sneha-mishra.png",
+          "image": "/images/teams/fy26/event/sneha-mishra.png",
           "linkedin": "https://www.linkedin.com"
         },
         {
           "name": "Samaira Verma",
           "role": "Event Sub Head",
-          "image": "/images/teams/event/samaira-verma.png",
+          "image": "/images/teams/fy26/event/samaira-verma.png",
           "linkedin": "https://www.linkedin.com"
         }
       ],
@@ -100,19 +100,19 @@
         {
           "name": "Sarthak Goyal",
           "role": "Event Volunteer",
-          "image": "/images/teams/event/sarthak-goyal.png",
+          "image": "/images/teams/fy26/event/sarthak-goyal.png",
           "linkedin": "https://www.linkedin.com"
         },
         {
           "name": "Saumya Sharma",
           "role": "Event Volunteer",
-          "image": "/images/teams/event/saumya-sharma.png",
+          "image": "/images/teams/fy26/event/saumya-sharma.png",
           "linkedin": "https://www.linkedin.com"
         },
         {
           "name": "Sachin Yadav",
           "role": "Event Volunteer",
-          "image": "/images/teams/event/sachin-yadav.png",
+          "image": "/images/teams/fy26/event/sachin-yadav.png",
           "linkedin": "https://www.linkedin.com"
         }
       ]
@@ -122,14 +122,14 @@
       "head": {
         "name": "Niyati Gautam",
         "role": "Design Head",
-        "image": "/images/teams/design/niyati-gautam.png",
+        "image": "/images/teams/fy26/design/niyati-gautam.png",
         "linkedin": "https://www.linkedin.com"
       },
       "volunteers": [
         {
           "name": "Ayaaz",
           "role": "Design Volunteer",
-          "image": "/images/teams/design/ayaaz.png",
+          "image": "/images/teams/fy26/design/ayaaz.png",
           "linkedin": "https://www.linkedin.com"
         }
       ]
@@ -139,20 +139,20 @@
       "head": {
         "name": "Arihant",
         "role": "Sponsorship and PR Head",
-        "image": "/images/teams/sponsorship/arihant.png",
+        "image": "/images/teams/fy26/sponsorship/arihant.png",
         "linkedin": "https://www.linkedin.com"
       },
       "volunteers": [
         {
           "name": "Rishabh Wasan",
           "role": "Sponsorship and PR Volunteer",
-          "image": "/images/teams/sponsorship/rishabh-wasan.png",
+          "image": "/images/teams/fy26/sponsorship/rishabh-wasan.png",
           "linkedin": "https://www.linkedin.com"
         },
         {
           "name": "Raviraj Singh",
           "role": "Sponsorship and PR Volunteer",
-          "image": "/images/teams/sponsorship/raviraj-singh.png",
+          "image": "/images/teams/fy26/sponsorship/raviraj-singh.png",
           "linkedin": "https://www.linkedin.com"
         }
       ]
@@ -162,14 +162,14 @@
       "head": {
         "name": "Lakshya Gupta",
         "role": "Social Media Head",
-        "image": "/images/teams/social-media/lakshya-gupta.png",
+        "image": "/images/teams/fy26/social-media/lakshya-gupta.png",
         "linkedin": "https://www.linkedin.com"
       },
       "subHeads": [
         {
           "name": "Shreeya Shukla",
           "role": "Social Media Sub Head",
-          "image": "/images/teams/social-media/shreeya-shukla.png",
+          "image": "/images/teams/fy26/social-media/shreeya-shukla.png",
           "linkedin": "https://www.linkedin.com"
         }
       ],
@@ -177,19 +177,19 @@
         {
           "name": "Yash Negi",
           "role": "Social Media Volunteer",
-          "image": "/images/teams/social-media/yash-negi.png",
+          "image": "/images/teams/fy26/social-media/yash-negi.png",
           "linkedin": "https://www.linkedin.com"
         },
         {
           "name": "Akshita",
           "role": "Social Media Volunteer",
-          "image": "/images/teams/social-media/akshita.png",
+          "image": "/images/teams/fy26/social-media/akshita.png",
           "linkedin": "https://www.linkedin.com"
         },
         {
           "name": "Kritika Maurya",
           "role": "Social Media Volunteer",
-          "image": "/images/teams/social-media/kritika-maurya.png",
+          "image": "/images/teams/fy26/social-media/kritika-maurya.png",
           "linkedin": "https://www.linkedin.com"
         }
       ]
@@ -199,32 +199,32 @@
       "head": {
         "name": "Nancy",
         "role": "Documentation Head",
-        "image": "/images/teams/documentation/nancy.png",
+        "image": "/images/teams/fy26/documentation/nancy.png",
         "linkedin": "https://linkedin.com"
       },
       "volunteers": [
         {
           "name": "Tanishk Rai",
           "role": "Documentation Volunteer",
-          "image": "/images/teams/documentation/tanishk-rai.png",
+          "image": "/images/teams/fy26/documentation/tanishk-rai.png",
           "linkedin": "https://linkedin.com"
         },
         {
           "name": "Nitya Pal",
           "role": "Documentation Volunteer",
-          "image": "/images/teams/documentation/nitya-pal.png",
+          "image": "/images/teams/fy26/documentation/nitya-pal.png",
           "linkedin": "https://linkedin.com"
         },
         {
           "name": "Gauri Sharma",
           "role": "Documentation Volunteer",
-          "image": "/images/teams/documentation/gauri-sharma.png",
+          "image": "/images/teams/fy26/documentation/gauri-sharma.png",
           "linkedin": "https://linkedin.com"
         },
         {
           "name": "Shourya Jain",
           "role": "Documentation Volunteer",
-          "image": "/images/teams/documentation/shourya-jain.png",
+          "image": "/images/teams/fy26/documentation/shourya-jain.png",
           "linkedin": "https://linkedin.com"
         }
       ]
@@ -234,14 +234,14 @@
       "head": {
         "name": "Kishan Gupta",
         "role": "Editing Head",
-        "image": "/images/teams/editing/kishan-gupta.png",
+        "image": "/images/teams/fy26/editing/kishan-gupta.png",
         "linkedin": "https://www.linkedin.com"
       },
       "volunteers": [
         {
           "name": "Himanshu Kala",
           "role": "Editing Volunteer",
-          "image": "/images/teams/editing/himanshu-kala.png",
+          "image": "/images/teams/fy26/editing/himanshu-kala.png",
           "linkedin": "https://www.linkedin.com"
         }
       ]
