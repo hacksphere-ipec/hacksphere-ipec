@@ -6,14 +6,14 @@
     "shortDescription": "A beginner-friendly workshop on Generative AI focusing on Google Gemini.\nCovering backend architecture, multimodal capabilities, and API integration through hands-on demos.",
     "fullDescription": "A beginner-friendly workshop on Generative AI focusing on Google Gemini, covering its backend architecture, multimodal capabilities, and API integration through hands-on demos. The event was free of cost, and all participants received e-certificates.",
     "images": [
-      "/images/events/tictechtoe/img-1.jpeg",
-      "/images/events/tictechtoe/img-2.jpeg",
-      "/images/events/tictechtoe/img-3.jpeg",
-      "/images/events/tictechtoe/img-4.jpeg",
-      "/images/events/tictechtoe/img-5.jpeg",
-      "/images/events/tictechtoe/img-6.jpeg"
+      "/images/events/tictechtoe/img-1.webp",
+      "/images/events/tictechtoe/img-2.webp",
+      "/images/events/tictechtoe/img-3.webp",
+      "/images/events/tictechtoe/img-4.webp",
+      "/images/events/tictechtoe/img-5.webp",
+      "/images/events/tictechtoe/img-6.webp"
     ],
-    "thumbnail": "/images/events/tictechtoe/img-1.jpeg",
+    "thumbnail": "/images/events/tictechtoe/img-1.webp",
     "location": "AIML Seminar Hall, IPEC campus",
     "category": "Workshop"
   },
@@ -24,13 +24,13 @@
     "shortDescription": "An interactive speaking session by HackSphere IPEC.\nFocused on improving communication skills, confidence, and public speaking.",
     "fullDescription": "An interactive speaking session by HackSphere IPEC focused on improving communication skills, confidence, and public speaking. This workshop helps participants develop better presentation skills and overcome stage fright.",
     "images": [
-      "/images/events/msoffice/img-1.jpeg",
-      "/images/events/msoffice/img-2.jpeg",
-      "/images/events/msoffice/img-3.jpeg",
-      "/images/events/msoffice/img-4.jpeg",
-      "/images/events/msoffice/img-5.jpeg"
+      "/images/events/msoffice/img-1.webp",
+      "/images/events/msoffice/img-2.webp",
+      "/images/events/msoffice/img-3.webp",
+      "/images/events/msoffice/img-4.webp",
+      "/images/events/msoffice/img-5.webp"
     ],
-    "thumbnail": "/images/events/msoffice/img-1.jpeg",
+    "thumbnail": "/images/events/msoffice/img-1.webp",
     "location": "Microsoft Office, Noida",
     "category": "Workshop"
   },
@@ -41,14 +41,14 @@
     "shortDescription": "A technical speaking session focused on Cybersecurity and AI in digital safety.\nFeatures hands-on tasks, prizes for top performers, and e-certificates for all participants.",
     "fullDescription": "A technical speaking session by HackSphere IPEC Student Chapter focused on Cybersecurity and the role of AI in digital safety, featuring hands-on tasks, prizes for top performers, and e-certificates for all participants.",
     "images": [
-      "/images/events/techverse/img-1.jpeg",
-      "/images/events/techverse/img-2.jpeg",
-      "/images/events/techverse/img-3.jpeg",
-      "/images/events/techverse/img-4.jpeg",
-      "/images/events/techverse/img-5.jpeg",
-      "/images/events/techverse/img-6.jpeg"
+      "/images/events/techverse/img-1.webp",
+      "/images/events/techverse/img-2.webp",
+      "/images/events/techverse/img-3.webp",
+      "/images/events/techverse/img-4.webp",
+      "/images/events/techverse/img-5.webp",
+      "/images/events/techverse/img-6.webp"
     ],
-    "thumbnail": "/images/events/techverse/img-1.jpeg",
+    "thumbnail": "/images/events/techverse/img-1.webp",
     "location": "Atal Sabhaghar, IPEC Campus",
     "category": "Workshop"
   },
@@ -59,13 +59,13 @@
     "shortDescription": "An AI-focused hackathon with ₹15,000 prize pool organized by HackSphere in collaboration with Think AI Club.\nFeatures trophies for top teams and certificates for all participants.",
     "fullDescription": "An AI-focused hackathon organized by HackSphere in collaboration with Think AI Club to promote innovation and AI-driven product development, featuring a ₹15,000 prize pool, trophies for top teams, and certificates for all participants.",
     "images": [
-      "/images/events/hackmart/img-1.jpeg",
-      "/images/events/hackmart/img-2.jpeg",
-      "/images/events/hackmart/img-3.jpeg",
-      "/images/events/hackmart/img-4.jpeg",
-      "/images/events/hackmart/img-5.jpeg"
+      "/images/events/hackmart/img-1.webp",
+      "/images/events/hackmart/img-2.webp",
+      "/images/events/hackmart/img-3.webp",
+      "/images/events/hackmart/img-4.webp",
+      "/images/events/hackmart/img-5.webp"
     ],
-    "thumbnail": "/images/events/hackmart/img-1.jpeg",
+    "thumbnail": "/images/events/hackmart/img-1.webp",
     "location": "AIML Seminar Hall, IPEC campus",
     "category": "Competition"
   }
