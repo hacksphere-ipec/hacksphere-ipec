@@ -158,7 +158,7 @@ async function loadEvents() {
 function displayEvents() {
     eventsGrid.innerHTML = '';
     
-    events.forEach((event, index) => {
+    events.slice().reverse().forEach((event, index) => {
         const eventCard = createEventCard(event);
         eventCard.classList.add('fade-in');
         eventCard.style.transitionDelay = `${index * 0.01}s`;
