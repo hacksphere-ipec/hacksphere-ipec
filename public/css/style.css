@@ -1674,7 +1674,7 @@ p {
         var(--bg-dark) 100%
     );
     background-size: 200% 100%;
-    animation: skeleton-loading 1.5s ease-in-out infinite;
+    animation: skeleton-loading 0.2s ease-in-out infinite;
 }
 
 @keyframes skeleton-loading {
@@ -1698,7 +1698,7 @@ p {
     border: 2.5px solid transparent;
     background: linear-gradient(var(--card-bg), var(--card-bg)) padding-box,
                 var(--gradient-text) border-box;
-    transition: var(--transition);
+    transition: all 0.05s ease;
     opacity: 0;
 }
 
@@ -1716,6 +1716,18 @@ p {
     height: 1px;
     background: linear-gradient(90deg, transparent, var(--border-color), transparent);
     margin: 0.8rem 0;
+}
+
+/* Fast team card animations */
+.team-card.fade-in {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.05s ease, transform 0.05s ease;
+}
+
+.team-card.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .team-name {

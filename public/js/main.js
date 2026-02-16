@@ -101,7 +101,7 @@ function initializeScrollAnimations() {
     // Add animation classes to elements (skip about cards to keep them always visible)
     document.querySelectorAll('.achievement-item').forEach((item, index) => {
         item.classList.add('slide-in-left');
-        item.style.transitionDelay = `${index * 0.1}s`;
+        item.style.transitionDelay = `${index * 0.01}s`;
     });
 }
 
@@ -161,7 +161,7 @@ function displayEvents() {
     events.forEach((event, index) => {
         const eventCard = createEventCard(event);
         eventCard.classList.add('fade-in');
-        eventCard.style.transitionDelay = `${index * 0.1}s`;
+        eventCard.style.transitionDelay = `${index * 0.01}s`;
         eventsGrid.appendChild(eventCard);
     });
 
@@ -287,7 +287,7 @@ function displayLeadership() {
     leadership.forEach((leader, index) => {
         const leaderCard = createLeaderCard(leader);
         leaderCard.classList.add('fade-in');
-        leaderCard.style.transitionDelay = `${index * 0.2}s`;
+        leaderCard.style.transitionDelay = `${index * 0.01}s`;
         leadershipGrid.appendChild(leaderCard);
     });
 
