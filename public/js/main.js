@@ -826,7 +826,9 @@ function showFormSuccess() {
 function initializeSponsorsCarousel() {
     const viewport = document.querySelector('.sponsors-viewport');
     const track = document.getElementById('sponsors-track');
-    if (!track || !viewport) return;
+    const prevBtn = document.getElementById('sponsor-prev');
+    const nextBtn = document.getElementById('sponsor-next');
+    if (!track || !viewport || !prevBtn || !nextBtn) return;
 
     const originalItems = Array.from(track.querySelectorAll('.sponsor-item'));
     const count = originalItems.length;
@@ -838,6 +840,7 @@ function initializeSponsorsCarousel() {
 
     let currentIndex = 0;
     let isTransitioning = false;
+    let autoScrollInterval = null;
 
     function applyTransform(useTransition = true) {
         if (useTransition) {
@@ -884,11 +887,62 @@ function initializeSponsorsCarousel() {
         }
     }
 
+    function prev() {
+        if (isTransitioning) return;
+        isTransitioning = true;
+
+        if (currentIndex === 0) {
+            // Jump to the end without transition, then animate back
+            currentIndex = count;
+            applyTransform(false);
+            setTimeout(() => {
+                currentIndex--;
+                applyTransform(true);
+                setTimeout(() => {
+                    isTransitioning = false;
+                }, 650);
+            }, 50);
+        } else {
+            currentIndex--;
+            applyTransform(true);
+            setTimeout(() => {
+                isTransitioning = false;
+            }, 650);
+        }
+    }
+
+    function startAutoScroll() {
+        autoScrollInterval = setInterval(next, 3500);
+    }
+
+    function stopAutoScroll() {
+        if (autoScrollInterval) {
+            clearInterval(autoScrollInterval);
+            autoScrollInterval = null;
+        }
+    }
+
+    // Manual navigation event listeners
+    nextBtn.addEventListener('click', () => {
+        stopAutoScroll();
+        next();
+        startAutoScroll();
+    });
+
+    prevBtn.addEventListener('click', () => {
+        stopAutoScroll();
+        prev();
+        startAutoScroll();
+    });
+
+    // Initialize
     applyTransform(false);
     window.addEventListener('resize', debounce(() => {
         if (!isTransitioning) applyTransform(false);
     }, 250));
-    setInterval(next, 3500);
+    
+    // Start auto-scroll
+    startAutoScroll();
 }
 
 // Smooth scrolling

@@ -905,6 +905,50 @@ p {
     margin: 0 auto;
 }
 
+.sponsor-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    color: var(--white);
+}
+
+.sponsor-nav:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: var(--primary-blue);
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 4px 20px rgba(0, 123, 255, 0.3);
+}
+
+.sponsor-nav:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.sponsor-nav-prev {
+    left: -24px;
+}
+
+.sponsor-nav-next {
+    right: -24px;
+}
+
+.sponsor-nav svg {
+    width: 20px;
+    height: 20px;
+    stroke-width: 2.5;
+}
+
 .sponsors-viewport {
     overflow: hidden;
     padding: 2rem 0;
@@ -1269,6 +1313,24 @@ p {
 
     .sponsors-carousel {
         max-width: 100%;
+    }
+
+    .sponsor-nav {
+        width: 40px;
+        height: 40px;
+    }
+
+    .sponsor-nav-prev {
+        left: 10px;
+    }
+
+    .sponsor-nav-next {
+        right: 10px;
+    }
+
+    .sponsor-nav svg {
+        width: 18px;
+        height: 18px;
     }
 
     .sponsor-item {
