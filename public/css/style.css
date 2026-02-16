@@ -1417,39 +1417,34 @@ p {
     background: var(--black);
 }
 
-/* Year Selector */
+/* Year Selector in Sidebar */
 .year-selector-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 3rem;
-    padding: 1.5rem;
-    background: var(--card-bg);
-    border-radius: 12px;
-    border: 1px solid var(--border-color);
-    max-width: 300px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-bottom: 1.5rem;
+    padding: 0;
+    background: none;
+    border: none;
 }
 
 .year-selector {
-    padding: 0.8rem 1.5rem;
-    background: var(--bg-dark);
-    border: 2px solid var(--border-color);
+    width: 100%;
+    padding: 1rem 1.2rem;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-left: 3px solid var(--primary-green);
     border-radius: 8px;
     color: var(--white);
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-weight: 600;
     cursor: pointer;
     transition: var(--transition);
-    min-width: 180px;
     outline: none;
-    text-align: center;
+    text-align: left;
 }
 
 .year-selector:hover {
-    border-color: var(--primary-green);
-    box-shadow: 0 0 10px var(--green-glow);
+    background: var(--bg-darker);
+    border-left-color: var(--primary-blue);
+    box-shadow: 0 0 8px var(--green-glow);
 }
 
 .year-selector:focus {
@@ -1458,15 +1453,59 @@ p {
 }
 
 .year-selector option {
-    background: var(--bg-dark);
+    background: var(--card-bg);
     color: var(--white);
     padding: 0.8rem;
+    border: none;
+}
+
+.year-selector option:hover {
+    background: var(--bg-darker);
+    color: var(--primary-green);
+}
+
+/* Mobile Navigation Container */
+.teams-mobile-container {
+    display: none;
+}
+
+/* Mobile Year Selector Wrapper - Now inside container but full width */
+.mobile-year-selector-wrapper {
+    display: none;
+    width: calc(100% + 4rem);
+    background: var(--bg-dark);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem 0;
+    margin: 2rem -2rem 1rem -2rem;
+}
+
+/* Mobile Year Selector - Now outside container */
+.mobile-year-selector {
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.mobile-year-selector .year-selector {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-left: 3px solid var(--primary-green);
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 0.8rem 1rem;
+    max-width: 200px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .teams-layout {
     display: flex;
     gap: 2.5rem;
-    margin-top: 4rem;
+    margin-top: 3rem;
 }
 
 /* Sidebar Navigation */
@@ -1510,11 +1549,10 @@ p {
     box-shadow: 0 0 15px rgba(0, 230, 118, 0.2);
 }
 
-/* Mobile Tabs */
+/* Mobile Tabs - Only team tabs scroll, separate from year selector */
 .teams-mobile-tabs {
-    display: none;
     overflow-x: auto;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     padding-bottom: 1rem;
     -webkit-overflow-scrolling: touch;
 }
@@ -1767,7 +1805,11 @@ p {
         display: none;
     }
     
-    .teams-mobile-tabs {
+    .mobile-year-selector-wrapper {
+        display: block;
+    }
+    
+    .teams-mobile-container {
         display: block;
     }
     
@@ -1845,6 +1887,23 @@ p {
     .mobile-tab {
         padding: 0.8rem 1.5rem;
         font-size: 1.2rem;
+    }
+    
+    /* Mobile year selector adjustments */
+    .mobile-year-selector-wrapper {
+        width: calc(100% + 2rem);
+        margin: 2rem -1rem 1rem -1rem;
+        padding: 0.8rem 0;
+    }
+    
+    .mobile-year-selector {
+        max-width: 280px;
+    }
+    
+    .mobile-year-selector .year-selector {
+        font-size: 1.1rem;
+        padding: 0.7rem 0.8rem;
+        max-width: 180px;
     }
     
     .teams-content-title {

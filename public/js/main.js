@@ -356,10 +356,12 @@ async function loadYears() {
         
         availableYears = await response.json();
         
-        // Populate year selector
+        // Populate year selectors (both desktop and mobile)
         const yearSelect = document.getElementById('team-year-select');
-        if (yearSelect && availableYears.length > 0) {
-            yearSelect.innerHTML = availableYears.map(year => {
+        const yearSelectMobile = document.getElementById('team-year-select-mobile');
+        
+        if (availableYears.length > 0) {
+            const yearOptions = availableYears.map(year => {
                 const yearLabel = formatYearLabel(year);
                 return `<option value="${year}">${yearLabel}</option>`;
             }).join('');
@@ -371,13 +373,33 @@ async function loadYears() {
                 currentYear = availableYears[0]; // Most recent available
             }
             
-            yearSelect.value = currentYear;
+            // Update desktop selector
+            if (yearSelect) {
+                yearSelect.innerHTML = yearOptions;
+                yearSelect.value = currentYear;
+                
+                // Add change listener for desktop
+                yearSelect.addEventListener('change', (e) => {
+                    currentYear = e.target.value;
+                    // Sync mobile selector
+                    if (yearSelectMobile) yearSelectMobile.value = currentYear;
+                    loadTeams(currentYear);
+                });
+            }
             
-            // Add change listener
-            yearSelect.addEventListener('change', (e) => {
-                currentYear = e.target.value;
-                loadTeams(currentYear);
-            });
+            // Update mobile selector
+            if (yearSelectMobile) {
+                yearSelectMobile.innerHTML = yearOptions;
+                yearSelectMobile.value = currentYear;
+                
+                // Add change listener for mobile
+                yearSelectMobile.addEventListener('change', (e) => {
+                    currentYear = e.target.value;
+                    // Sync desktop selector
+                    if (yearSelect) yearSelect.value = currentYear;
+                    loadTeams(currentYear);
+                });
+            }
         }
     } catch (error) {
         console.error('Error loading years:', error);
@@ -447,7 +469,14 @@ function initializeTeamsNavigation() {
     
     // Clear existing content
     if (sidebar) sidebar.innerHTML = '';
-    if (mobileTabs) mobileTabs.innerHTML = '';
+    
+    // For mobile tabs, preserve the year selector and only clear team tabs
+    if (mobileTabs) {
+        const existingContainer = mobileTabs.querySelector('.mobile-tabs-container');
+        if (existingContainer) {
+            existingContainer.remove();
+        }
+    }
     
     // Get team keys
     const teamKeys = Object.keys(teamsData.teams);
