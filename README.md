@@ -12,7 +12,7 @@ To change which year displays by default on the Teams page:
 ### 2. Adding a New Year
 1. **Folders**: Create `data/fy27/` and `public/images/teams/fy27/`.
 2. **Data**: Copy `data/teams_example.json` to your new folder as `teams.json`.
-3. **Images**: Upload member photos to their respective team folders in `public/images/teams/fy27/`.
+3. **Images**: Upload member photos to their respective team folders in `public/images/teams/fy27/`. Use **.webp** format for best performance.
 
 ## 👥 Updating Sections
 
@@ -20,7 +20,7 @@ To change which year displays by default on the Teams page:
 Modify `data/fyXX/teams.json`:
 - **Presidents**: Update names and images for that specific year.
 - **Teams**: Update Heads, Sub-Heads, and Volunteers for each category.
-- **Images**: Use paths like `/images/teams/fyXX/tech/name.png`.
+- **Images**: Use paths like `/images/teams/fyXX/tech/name.webp`.
 
 ### 2. Main Page Leadership (Front Page)
 Modify `data/leadership.json`:

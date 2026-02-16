@@ -561,7 +561,7 @@ function fixPresidentImagePaths(president, year) {
     const fixedPresident = { ...president };
     
     // Update image path to use current year
-    // Convert /images/presidents/fy26/name.png to /images/presidents/fy27/name.png
+    // Convert /images/presidents/fy26/name.webp to /images/presidents/fy27/name.webp
     fixedPresident.image = president.image.replace(
         /\/images\/presidents\/fy\d+\//,
         `/images/presidents/${year}/`

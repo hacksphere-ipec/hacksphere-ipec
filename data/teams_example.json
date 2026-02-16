@@ -4,13 +4,13 @@
     "president": {
       "name": "President Name Here",
       "role": "President",
-      "image": "/images/presidents/fy26/president-name.png",
+      "image": "/images/presidents/fy26/president-name.webp",
       "linkedin": "https://linkedin.com/in/username"
     },
     "vp": {
       "name": "VP Name Here",
       "role": "Vice President",
-      "image": "/images/presidents/fy26/vp-name.png",
+      "image": "/images/presidents/fy26/vp-name.webp",
       "linkedin": "https://linkedin.com/in/username"
     }
   },
@@ -24,20 +24,20 @@
       "head": {
         "name": "Tech Head Name Here",
         "role": "Technical Head",
-        "image": "/images/teams/fy26/tech/head-name.png",
+        "image": "/images/teams/fy26/tech/head-name.webp",
         "linkedin": "https://linkedin.com/in/username"
       },
       "subHeads": [
         {
           "name": "Tech Sub Head 1 Name Here",
           "role": "Tech Sub Head",
-          "image": "/images/teams/fy26/tech/subhead1-name.png",
+          "image": "/images/teams/fy26/tech/subhead1-name.webp",
           "linkedin": "https://linkedin.com/in/username"
         },
         {
           "name": "Tech Sub Head 2 Name Here",
           "role": "Tech Sub Head",
-          "image": "/images/teams/fy26/tech/subhead2-name.png",
+          "image": "/images/teams/fy26/tech/subhead2-name.webp",
           "linkedin": "https://linkedin.com/in/username"
         }
       ],
@@ -45,13 +45,13 @@
         {
           "name": "Tech Volunteer 1 Name Here",
           "role": "Tech Volunteer",
-          "image": "/images/teams/fy26/tech/volunteer1-name.png",
+          "image": "/images/teams/fy26/tech/volunteer1-name.webp",
           "linkedin": "https://linkedin.com/in/username"
         },
         {
           "name": "Tech Volunteer 2 Name Here",
           "role": "Tech Volunteer",
-          "image": "/images/teams/fy26/tech/volunteer2-name.png",
+          "image": "/images/teams/fy26/tech/volunteer2-name.webp",
           "linkedin": "https://linkedin.com/in/username"
         }
       ]
@@ -61,14 +61,14 @@
       "head": {
         "name": "Event Head Name Here",
         "role": "Event Head",
-        "image": "/images/teams/fy26/event/head-name.png",
+        "image": "/images/teams/fy26/event/head-name.webp",
         "linkedin": "https://linkedin.com/in/username"
       },
       "subHeads": [
         {
           "name": "Event Sub Head Name Here",
           "role": "Event Sub Head",
-          "image": "/images/teams/fy26/event/subhead-name.png",
+          "image": "/images/teams/fy26/event/subhead-name.webp",
           "linkedin": "https://linkedin.com/in/username"
         }
       ],
@@ -76,13 +76,13 @@
         {
           "name": "Event Volunteer 1 Name Here",
           "role": "Event Volunteer",
-          "image": "/images/teams/fy26/event/volunteer1-name.png",
+          "image": "/images/teams/fy26/event/volunteer1-name.webp",
           "linkedin": "https://linkedin.com/in/username"
         },
         {
           "name": "Event Volunteer 2 Name Here",
           "role": "Event Volunteer",
-          "image": "/images/teams/fy26/event/volunteer2-name.png",
+          "image": "/images/teams/fy26/event/volunteer2-name.webp",
           "linkedin": "https://linkedin.com/in/username"
         }
       ]
@@ -92,14 +92,14 @@
       "head": {
         "name": "Design Head Name Here",
         "role": "Design Head",
-        "image": "/images/teams/fy26/design/head-name.png",
+        "image": "/images/teams/fy26/design/head-name.webp",
         "linkedin": "https://linkedin.com/in/username"
       },
       "subHeads": [
         {
           "name": "Design Sub Head Name Here",
           "role": "Design Sub Head",
-          "image": "/images/teams/fy26/design/subhead-name.png",
+          "image": "/images/teams/fy26/design/subhead-name.webp",
           "linkedin": "https://linkedin.com/in/username"
         }
       ],
@@ -107,7 +107,7 @@
         {
           "name": "Design Volunteer Name Here",
           "role": "Design Volunteer",
-          "image": "/images/teams/fy26/design/volunteer-name.png",
+          "image": "/images/teams/fy26/design/volunteer-name.webp",
           "linkedin": "https://linkedin.com/in/username"
         }
       ]
@@ -117,7 +117,7 @@
       "head": {
         "name": "Documentation Head Name Here",
         "role": "Documentation Head",
-        "image": "/images/teams/fy26/documentation/head-name.png",
+        "image": "/images/teams/fy26/documentation/head-name.webp",
         "linkedin": "https://linkedin.com/in/username"
       },
       "subHeads": [],
@@ -125,7 +125,7 @@
         {
           "name": "Documentation Volunteer Name Here",
           "role": "Documentation Volunteer",
-          "image": "/images/teams/fy26/documentation/volunteer-name.png",
+          "image": "/images/teams/fy26/documentation/volunteer-name.webp",
           "linkedin": "https://linkedin.com/in/username"
         }
       ]
@@ -135,7 +135,7 @@
       "head": {
         "name": "Editing Head Name Here",
         "role": "Editing Head",
-        "image": "/images/teams/fy26/editing/head-name.png",
+        "image": "/images/teams/fy26/editing/head-name.webp",
         "linkedin": "https://linkedin.com/in/username"
       },
       "subHeads": [],
@@ -143,7 +143,7 @@
         {
           "name": "Editing Volunteer Name Here",
           "role": "Editing Volunteer",
-          "image": "/images/teams/fy26/editing/volunteer-name.png",
+          "image": "/images/teams/fy26/editing/volunteer-name.webp",
           "linkedin": "https://linkedin.com/in/username"
         }
       ]
@@ -153,14 +153,14 @@
       "head": {
         "name": "Social Media Head Name Here",
         "role": "Social Media Head",
-        "image": "/images/teams/fy26/social-media/head-name.png",
+        "image": "/images/teams/fy26/social-media/head-name.webp",
         "linkedin": "https://linkedin.com/in/username"
       },
       "subHeads": [
         {
           "name": "Social Media Sub Head Name Here",
           "role": "Social Media Sub Head",
-          "image": "/images/teams/fy26/social-media/subhead-name.png",
+          "image": "/images/teams/fy26/social-media/subhead-name.webp",
           "linkedin": "https://linkedin.com/in/username"
         }
       ],
@@ -168,7 +168,7 @@
         {
           "name": "Social Media Volunteer Name Here",
           "role": "Social Media Volunteer",
-          "image": "/images/teams/fy26/social-media/volunteer-name.png",
+          "image": "/images/teams/fy26/social-media/volunteer-name.webp",
           "linkedin": "https://linkedin.com/in/username"
         }
       ]
@@ -178,7 +178,7 @@
       "head": {
         "name": "Sponsorship Head Name Here",
         "role": "Sponsorship Head",
-        "image": "/images/teams/fy26/sponsorship/head-name.png",
+        "image": "/images/teams/fy26/sponsorship/head-name.webp",
         "linkedin": "https://linkedin.com/in/username"
       },
       "subHeads": [],
@@ -186,13 +186,13 @@
         {
           "name": "Sponsorship Volunteer 1 Name Here",
           "role": "Sponsorship Volunteer",
-          "image": "/images/teams/fy26/sponsorship/volunteer1-name.png",
+          "image": "/images/teams/fy26/sponsorship/volunteer1-name.webp",
           "linkedin": "https://linkedin.com/in/username"
         },
         {
           "name": "Sponsorship Volunteer 2 Name Here",
           "role": "Sponsorship Volunteer",
-          "image": "/images/teams/fy26/sponsorship/volunteer2-name.png",
+          "image": "/images/teams/fy26/sponsorship/volunteer2-name.webp",
           "linkedin": "https://linkedin.com/in/username"
         }
       ]
