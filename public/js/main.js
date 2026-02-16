@@ -835,14 +835,9 @@ function initializeSponsorsCarousel() {
     // Duplicate items for seamless infinite loop
     originalItems.forEach(item => track.appendChild(item.cloneNode(true)));
     const items = track.querySelectorAll('.sponsor-item');
-    const GAP = 48;
 
     let currentIndex = 0;
     let isTransitioning = false;
-
-    function getItemWidth() {
-        return items[0] ? items[0].offsetWidth : 140;
-    }
 
     function applyTransform(useTransition = true) {
         if (useTransition) {
@@ -853,11 +848,17 @@ function initializeSponsorsCarousel() {
 
         items.forEach((item) => item.classList.remove('center'));
         const centerEl = items[currentIndex];
-        if (centerEl) centerEl.classList.add('center');
-
-        const itemWidth = getItemWidth();
-        const offset = -(currentIndex * (itemWidth + GAP)) + (viewport.offsetWidth / 2) - (itemWidth / 2);
-        track.style.transform = `translateX(${offset}px)`;
+        
+        if (centerEl) {
+            centerEl.classList.add('center');
+            
+            // Calculate exact center position
+            // offset = (viewport_width / 2) - (distance_from_track_start + item_width / 2)
+            const itemCenter = centerEl.offsetLeft + (centerEl.offsetWidth / 2);
+            const offset = (viewport.offsetWidth / 2) - itemCenter;
+            
+            track.style.transform = `translateX(${offset}px)`;
+        }
     }
 
     function next() {
