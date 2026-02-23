@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Events - HackSphere IPEC</title>
+    <link rel="icon" type="image/webp" href="images/hs-logo.webp">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Back navigation arrow styles */
+        .back-nav {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 1rem 1.5rem;
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: var(--primary-blue);
+            text-decoration: none;
+            border: 2px solid var(--primary-blue);
+            border-radius: 8px;
+            transition: var(--transition);
+            margin-bottom: 2rem;
+        }
+
+        .back-nav:hover {
+            background: var(--primary-blue);
+            color: var(--white);
+            transform: translateX(-3px);
+        }
+
+        .back-nav-bottom {
+            margin-top: 4rem;
+            justify-content: center;
+        }
+
+        .back-arrow {
+            width: 18px;
+            height: 18px;
+            transition: var(--transition);
+        }
+
+        .back-nav:hover .back-arrow {
+            transform: translateX(-2px);
+        }
+
+        /* Events archive specific styling */
+        .events-archive {
+            padding: 12rem 0 8rem;
+        }
+
+        .events-archive .events-grid {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+        }
+
+        @media (max-width: 1023px) {
+            .events-archive .events-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .events-archive .events-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <img src="images/hs-logo.webp" alt="HackSphere" class="logo-image">
+                <span class="logo-text">HackSphere</span>
+            </a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="/#hero" class="nav-link">Home</a></li>
+                <li><a href="/#about" class="nav-link">About</a></li>
+                <li><a href="events.html" class="nav-link">All Events</a></li>
+                <li><a href="/#sponsors" class="nav-link">Sponsors</a></li>
+                <li><a href="/#leadership" class="nav-link">Leadership</a></li>
+                <li><a href="/#teams" class="nav-link">Teams</a></li>
+                <li><a href="/#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-hamburger" id="nav-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Events Archive Section -->
+    <section id="events" class="events events-archive">
+        <div class="container">
+            <!-- Top back navigation -->
+            <a href="/#events" class="back-nav">
+                <svg class="back-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 12H5M12 5l-7 7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Back</span>
+            </a>
+
+            <div class="section-header">
+                <h2 class="section-title">All Events Archive</h2>
+                <p class="section-subtitle">Explore our complete collection of tech events, workshops, and hackathons</p>
+            </div>
+            
+            <div class="events-grid" id="events-grid">
+                <!-- Events will be loaded dynamically -->
+            </div>
+            
+            <div class="loading" id="events-loading">
+                <div class="spinner"></div>
+                <p>Loading events...</p>
+            </div>
+
+            <!-- Bottom back navigation -->
+            <div style="text-align: center;">
+                <a href="/#events" class="back-nav back-nav-bottom">
+                    <svg class="back-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 12H5M12 5l-7 7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Back</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">HackSphere</span>
+                    <span class="logo-highlight">IPEC</span>
+                </div>
+                <p>© 2024 HackSphere IPEC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simplified version for events archive page
+        const navbar = document.getElementById('navbar');
+        const navMenu = document.getElementById('nav-menu');
+        const navHamburger = document.getElementById('nav-hamburger');
+        const eventsGrid = document.getElementById('events-grid');
+        const eventsLoading = document.getElementById('events-loading');
+
+        let events = [];
+
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeNavigation();
+            loadEvents();
+        });
+
+        // Navigation functionality
+        function initializeNavigation() {
+            // Navbar scroll effect
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+            // Mobile menu toggle
+            navHamburger.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+                navHamburger.classList.toggle('active');
+            });
+
+            // Close mobile menu when clicking on a link
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', function() {
+                    navMenu.classList.remove('active');
+                    navHamburger.classList.remove('active');
+                });
+            });
+        }
+
+        // Load events from API
+        async function loadEvents() {
+            try {
+                const response = await fetch('/api/events');
+                if (!response.ok) {
+                    throw new Error('Failed to fetch events');
+                }
+                
+                events = await response.json();
+                displayEvents(false); // false = show all events (not home page)
+            } catch (error) {
+                console.error('Error loading events:', error);
+                showEventsError();
+            } finally {
+                eventsLoading.style.display = 'none';
+            }
+        }
+
+        function displayEvents(isHomePage = false) {
+            eventsGrid.innerHTML = '';
+            
+            // Show all events in reverse chronological order
+            const eventsToShow = events.slice().reverse();
+            
+            eventsToShow.forEach((event, index) => {
+                const eventCard = createEventCard(event);
+                eventCard.classList.add('fade-in');
+                eventCard.style.transitionDelay = `${index * 0.01}s`;
+                eventsGrid.appendChild(eventCard);
+            });
+
+            // Re-observe new elements for animations
+            document.querySelectorAll('.event-card.fade-in').forEach(card => {
+                const observer = new IntersectionObserver(function(entries) {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                        }
+                    });
+                }, { threshold: 0.1 });
+                observer.observe(card);
+            });
+        }
+
+        function createEventCard(event) {
+            const card = document.createElement('div');
+            card.className = 'event-card';
+            
+            const images = event.images || [event.thumbnail];
+            const slidesHtml = images.map((img, i) => `
+                <div class="event-slide ${i === 0 ? 'active' : ''}" data-index="${i}">
+                    <img src="${img}" alt="${event.title}" class="event-image" loading="lazy">
+                </div>
+            `).join('');
+            
+            const dotsHtml = images.map((_, i) => `
+                <span class="event-dot ${i === 0 ? 'active' : ''}" data-index="${i}" aria-label="Slide ${i + 1}"></span>
+            `).join('');
+            
+            card.innerHTML = `
+                <div class="event-slider">
+                    <div class="event-slides">
+                        ${slidesHtml}
+                    </div>
+                    <div class="event-dots">${dotsHtml}</div>
+                </div>
+                <div class="event-content">
+                    <span class="event-category">${event.category}</span>
+                    <h3 class="event-title">${event.title}</h3>
+                    <div class="event-date">
+                        <i class="fas fa-calendar-alt"></i>
+                        ${event.date}
+                    </div>
+                    <p class="event-description">${event.shortDescription}</p>
+                    <div class="event-footer">
+                        <span class="event-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            ${event.location}
+                        </span>
+                    </div>
+                </div>
+            `;
+            
+            // Initialize slider
+            initEventSlider(card, images.length);
+            
+            return card;
+        }
+
+        function initEventSlider(card, totalSlides) {
+            const slides = card.querySelectorAll('.event-slide');
+            const dots = card.querySelectorAll('.event-dot');
+            let currentIndex = 0;
+            let interval;
+            
+            function goToSlide(index) {
+                currentIndex = (index + totalSlides) % totalSlides;
+                slides.forEach((s, i) => s.classList.toggle('active', i === currentIndex));
+                dots.forEach((d, i) => d.classList.toggle('active', i === currentIndex));
+            }
+            
+            function nextSlide() {
+                goToSlide(currentIndex + 1);
+            }
+            
+            dots.forEach((dot, i) => {
+                dot.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    goToSlide(i);
+                    resetInterval();
+                });
+            });
+            
+            function resetInterval() {
+                clearInterval(interval);
+                interval = setInterval(nextSlide, 4000);
+            }
+            
+            interval = setInterval(nextSlide, 4000);
+        }
+
+        function showEventsError() {
+            eventsGrid.innerHTML = `
+                <div class="error-message">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <h3>Unable to load events</h3>
+                    <p>Please try refreshing the page or contact support if the problem persists.</p>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
