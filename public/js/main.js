@@ -26,6 +26,13 @@ document.addEventListener('DOMContentLoaded', async function() {
     initializeContactForm();
     initializeSmoothScrolling();
     initializeSponsorsCarousel();
+    
+    // Re-render events on resize to handle mobile/desktop switch
+    window.addEventListener('resize', function() {
+        if (events.length > 0) {
+            displayEvents();
+        }
+    });
 });
 
 // Navigation functionality
@@ -155,15 +162,31 @@ async function loadEvents() {
     }
 }
 
-function displayEvents() {
+function displayEvents(isHomePage = true) {
     eventsGrid.innerHTML = '';
     
-    events.slice().reverse().forEach((event, index) => {
-        const eventCard = createEventCard(event);
-        eventCard.classList.add('fade-in');
-        eventCard.style.transitionDelay = `${index * 0.01}s`;
-        eventsGrid.appendChild(eventCard);
-    });
+    if (isHomePage) {
+        // Dynamic event count based on screen size
+        const isDesktop = window.innerWidth >= 1024;
+        const eventCount = isDesktop ? 3 : 2;
+        const eventsToShow = events.slice().reverse().slice(0, eventCount);
+        
+        eventsToShow.forEach((event, index) => {
+            const eventCard = createEventCard(event);
+            eventCard.classList.add('fade-in');
+            eventCard.style.transitionDelay = `${index * 0.01}s`;
+            eventsGrid.appendChild(eventCard);
+        });
+    } else {
+        // Show all events for archive page
+        const eventsToShow = events.slice().reverse();
+        eventsToShow.forEach((event, index) => {
+            const eventCard = createEventCard(event);
+            eventCard.classList.add('fade-in');
+            eventCard.style.transitionDelay = `${index * 0.01}s`;
+            eventsGrid.appendChild(eventCard);
+        });
+    }
 
     // Re-observe new elements
     document.querySelectorAll('.event-card.fade-in').forEach(card => {
